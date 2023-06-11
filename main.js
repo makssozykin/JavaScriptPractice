@@ -90,15 +90,56 @@
 
 // console.log(message); // "Клієнт з таким ім'ям є в базі даних!"
 
-const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
-const threshold = 15;
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 15;
 
-// Для чисел, менших ніж порогове значення, спрацьовує continue, виконання тіла
-// припиняється і управління передається на наступну ітерацію.
-for (let i = 0; i < numbers.length; i += 1) {
-  if (numbers[i] > threshold) {
-    continue;
-  }
+// // Для чисел, менших ніж порогове значення, спрацьовує continue, виконання тіла
+// // припиняється і управління передається на наступну ітерацію.
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] > threshold) {
+//     continue;
+//   }
 
-  console.log(`Число більше за ${threshold}: ${numbers[i]}`); // 18, 29, 34
+//   console.log(`Число більше за ${threshold}: ${numbers[i]}`); // 18, 29, 34
+// }
+// function makeArray(firstArray, secondArray, maxLength) {
+//     // Change code below this line
+//   const newArray = firstArray.concat(secondArray);
+// //   if (newArray.length > maxLength) {
+// //     newArrayCopy = newArray.slice(0, maxLength);
+// //     return newArrayCopy;
+// //   }
+//   return newArray;
+//     // Change code above this line
+//   }
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
+// makeArray();
+
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//     const newArray = firstArray.concat(secondArray);
+//     if (newArray.length > maxLength) {
+//         return newArray.slice(0, maxLength);
+//     }
+//         return newArray;
+// }
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+// makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+// makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
+// makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
+
+const target = 3;
+let sum = 0;
+
+for (let i = 0; i <= target; i += 1) {
+  sum += i;
 }
+
+console.log(sum);
