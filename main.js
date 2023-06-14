@@ -162,7 +162,7 @@
 //     let num = [];
 //     let arrayNum;
 //     let maxNum;
-//     for (let i = 0; i < words.length; i += 1) { 
+//     for (let i = 0; i < words.length; i += 1) {
 //         num += [words[i].length];
 //         arrayNum = num.split("");
 //         maxNum = Math.max(arrayNum);
@@ -173,5 +173,59 @@
 
 // findLongestWord("The quick brown fox jumped over the lazy dog");
 
-let longestWord = '';
-console.log(longestWord.length);
+// let longestWord = '';
+// console.log(longestWord.length);
+
+// // ✅ Логічно і синтаксично згруповані сутності
+// const bookShelf = {
+//   books: ["The Last Kingdom", "Dream Guardian"],
+//   // Це метод об'єкта
+//   getBooks() {
+//     console.log("Цей метод буде повертати всі книги - властивість books");
+//   },
+//   // Це метод об'єкта
+//   addBook(bookName) {
+//     console.log("Цей метод буде додавати нову книгу у властивість books");
+//   },
+// };
+
+// // Виклики методів
+// bookShelf.getBooks();
+// bookShelf.addBook("Нова книга");
+
+// const bookShelf = {
+//   books: ["The Last Kingdom"],
+//   getBooks() {
+//     console.log(this);
+//   },
+// };
+
+// // Перед крапкою знаходиться об'єкт bookShelf,
+// // тому, викликаючи метод, this буде зберігати посилання на нього.
+// bookShelf.getBooks(); // {books: ['The Last Kingdom'], getBooks: f}
+
+// const book = {
+//   title: "The Last Kingdom",
+//   author: "Bernard Cornwell",
+//   genres: ["historical prose", "adventure"],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   // Ключ // Значення властивості з таким ключем
+//     console.log(`${key}: ${book[key]}`);
+// }
+
+function countProps(object) {
+    let propCount = 0;
+  // Change code below this line
+    for (key in object) {
+        if (object.hasOwnProperty(key)) { 
+            propCount += object.hasOwnProperty(key);
+        }
+        }
+    return propCount;
+  // Change code above this line
+
+}
+countProps({ name: "Mango", age: 2 })
