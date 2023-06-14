@@ -216,16 +216,42 @@
 //     console.log(`${key}: ${book[key]}`);
 // }
 
-function countProps(object) {
-    let propCount = 0;
-  // Change code below this line
-    for (key in object) {
-        if (object.hasOwnProperty(key)) { 
-            propCount += object.hasOwnProperty(key);
-        }
-        }
-    return propCount;
-  // Change code above this line
+// function countProps(object) {
+//     let propCount = 0;
+//   // Change code below this line
+//     for (key in object) {
+//         if (object.hasOwnProperty(key)) { 
+//             propCount += object.hasOwnProperty(key);
+//         }
+//         }
+//     return propCount;
+//   // Change code above this line
 
+// }
+// countProps({ name: "Mango", age: 2 })
+
+const products = [
+  { name: "Radar", price: 1300, quantity: 4 },
+  { name: "Scanner", price: 2700, quantity: 3 },
+  { name: "Droid", price: 400, quantity: 7 },
+  { name: "Grip", price: 1200, quantity: 9 },
+];
+  const prodValue = [];
+function getAllPropValues(propName) {
+  // Change code below this line
+  for (const product of products) {
+    const values = Object.keys(product);
+      for (value of values) {
+        if (value === propName){
+            prodValue.push(value);
+            }
+    }
+  }
+    console.log(prodValue);
+  // Change code above this line
 }
-countProps({ name: "Mango", age: 2 })
+
+
+    
+getAllPropValues("name");
+getAllPropValues("price");
