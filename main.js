@@ -135,11 +135,43 @@
 // makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
 // makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
 
-const target = 3;
-let sum = 0;
+// const target = 3;
+// let sum = 0;
 
-for (let i = 0; i <= target; i += 1) {
-  sum += i;
-}
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
 
-console.log(sum);
+// console.log(sum);
+
+// const clients = ["Mango", "Ajax", "Poly"];
+
+// for (const client of clients) {
+//   console.log(client);
+// }
+
+// const string = "javascript";
+
+// for (const character of string) {
+//   console.log(character);
+// }
+
+// function findLongestWord(string) {
+//   // Change code below this line
+//     const words = string.split(" ");
+//     let num = [];
+//     let arrayNum;
+//     let maxNum;
+//     for (let i = 0; i < words.length; i += 1) { 
+//         num += [words[i].length];
+//         arrayNum = num.split("");
+//         maxNum = Math.max(arrayNum);
+        
+//     }
+//     console.log(arrayNum);
+// }
+
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+let longestWord = '';
+console.log(longestWord.length);
