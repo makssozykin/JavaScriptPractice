@@ -256,43 +256,209 @@
 // getAllPropValues("name");
 // getAllPropValues("price");
 
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) {
+//     if (potion.name === newPotion.name) {
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     }
+//     this.potions.push(newPotion);
+//   },
+//   removePotion(potionName) {
+//     for (let i = 0; i < this.potions.length; i += 1){
+//       if (this.potions[i].name === potionName) {
+//         this.potions.splice(this.potions[i], 1);
+//     }
+//       else {
+//         return `Potion ${potionName} is not in inventory!`;
+//     }
+//     }
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const i in this.potions) {
+//       if (i.includes(oldName)) {
+//         this.potions.splice(i, 1, newName);
+//       }
+//       else {
+//         return `Potion ${oldName} is not in inventory!`;
+//       }
+//     }
+//   },
+//   // Change code above this line
+// };
+
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37
   },
-  addPotion(newPotion) {
-    for (const potion of this.potions) {
-    if (potion.name === newPotion.name) {
-      return `Error! Potion ${newPotion.name} is already in your inventory!`;
-    }
-    }
-    this.potions.push(newPotion);
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34
   },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1){
-      if (this.potions[i].name === potionName) {
-        this.potions.splice(this.potions[i], 1);
-    }
-      else {
-        return `Potion ${potionName} is not in inventory!`;
-    }
-    }
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24
   },
-  updatePotionName(oldName, newName) {
-    for (const i in this.potions) {
-      if (i.includes(oldName)) {
-        this.potions.splice(i, 1, newName);
-      }
-      else {
-        return `Potion ${oldName} is not in inventory!`;
-      }
-    }
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21
   },
-  // Change code above this line
-};
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39
+  }
+];
+
+// const getNamesSortedByFriendCount = users => {
+//   const countFr = users.reduce((acc, user) => acc + user.friends.length, 0);
+//   const sortCountFr = countFr.sort((a, b) => a - b);
+//   const names = sortCountFr.map(user => user.name);
+// };
+
+
+// const getFriends = (users) => {
+//   return users.flatMap(user => user.friends)
+// };
+// console.table(getFriends(users));
+
+// const getTotalFriendCount = users => {
+//   const userFriends = users.flatMap(({friends}) => friends)
+//   const arr = userFriends.length;
+//    return arr;
+// };
+
+// const getTotalFriendCount = users => {
+//   users.reduce((allFriends, user) => {
+//     allFriends.push(...user.friends);
+//   return allFriends;
+//   }, []);
+  
+//   const friends = allFriends(users);
+//   const getFriendStat = (acc, friend) => {
+//     if (!acc.hasOwnProperty(friend)) {
+//     acc[friend] = 0;
+//   }
+
+//   acc[friend] += 1;
+
+//   return acc;
+//   }
+//   const countFriends = friends => friends.reduce(getFriendStat, {});
+//   const FriendCount = countFriends(friends);
+//   return FriendCount;
+// };
+
+// console.log(getTotalFriendCount(users))
+
+// const sortByAscendingBalance = users => {
+//    return users.sort((a, b) => a.balance - b.balance).map(user => user.name)
+// };
+// console.table(sortByAscendingBalance(users));
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+// const totalPlaytime = players.reduce((acc, player) => {return acc + player.playtime}, 0);
+// const totalGamesPlayed = players.reduce((acc, player) => { return acc + player.gamesPlayed}, 0);
+// const totalAveragePlaytimePerGame = totalPlaytime / (totalGamesPlayed / players.length);
+
+// console.log(totalPlaytime);
+// console.log(totalGamesPlayed);
+// console.log(totalAveragePlaytimePerGame);
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+// const ratings = books.filter(book => book.rating > MIN_BOOK_RATING);
+// const authors = ratings.map(book => book.author)
+
+// const names = authors.sort((a, b) => a.localeCompare(b));
+
+// console.log(ratings);
