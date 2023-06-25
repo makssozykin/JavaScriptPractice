@@ -220,7 +220,7 @@
 //     let propCount = 0;
 //   // Change code below this line
 //     for (key in object) {
-//         if (object.hasOwnProperty(key)) { 
+//         if (object.hasOwnProperty(key)) {
 //             propCount += object.hasOwnProperty(key);
 //         }
 //         }
@@ -230,28 +230,69 @@
 // }
 // countProps({ name: "Mango", age: 2 })
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
-  const prodValue = [];
-function getAllPropValues(propName) {
-  // Change code below this line
-  for (const product of products) {
-    const values = Object.keys(product);
-      for (value of values) {
-        if (value === propName){
-            prodValue.push(value);
-            }
-    }
-  }
-    console.log(prodValue);
-  // Change code above this line
-}
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+//   const prodValue = [];
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   for (const product of products) {
+//     const values = Object.keys(product);
+//       for (value of values) {
+//         if (value === propName){
+//             prodValue.push(value);
+//             }
+//     }
+//   }
+//     console.log(prodValue);
+//   // Change code above this line
+// }
 
 
     
-getAllPropValues("name");
-getAllPropValues("price");
+// getAllPropValues("name");
+// getAllPropValues("price");
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
+  // Change code below this line
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const potion of this.potions) {
+    if (potion.name === newPotion.name) {
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;
+    }
+    }
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1){
+      if (this.potions[i].name === potionName) {
+        this.potions.splice(this.potions[i], 1);
+    }
+      else {
+        return `Potion ${potionName} is not in inventory!`;
+    }
+    }
+  },
+  updatePotionName(oldName, newName) {
+    for (const i in this.potions) {
+      if (i.includes(oldName)) {
+        this.potions.splice(i, 1, newName);
+      }
+      else {
+        return `Potion ${oldName} is not in inventory!`;
+      }
+    }
+  },
+  // Change code above this line
+};
