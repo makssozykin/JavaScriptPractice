@@ -557,20 +557,20 @@
 //   .then(friends => console.log(friends))
 //   .catch(error => console.error(error));
 
-const fetchUsers = async () => {
-  const baseUrl = "https://jsonplaceholder.typicode.com";
-  const userIds = [1, 2, 3];
+// const fetchUsers = async () => {
+//   const baseUrl = "https://jsonplaceholder.typicode.com";
+//   const userIds = [1, 2, 3];
 
-  // 1. Створюємо масив промісів
-  const arrayOfPromises = userIds.map(async userId => {
-    const response = await fetch(`${baseUrl}/users/${userId}`);
-    return response.json();
-  });
+//   // 1. Створюємо масив промісів
+//   const arrayOfPromises = userIds.map(async userId => {
+//     const response = await fetch(`${baseUrl}/users/${userId}`);
+//     return response.json();
+//   });
 
-  // 2. Запускаємо усі проміси паралельно і чекаємо на їх завершення
-  const users = await Promise.all(arrayOfPromises);
-  console.log(users);
-};
+//   // 2. Запускаємо усі проміси паралельно і чекаємо на їх завершення
+//   const users = await Promise.all(arrayOfPromises);
+//   console.log(users);
+// };
 
-fetchUsers();
+// fetchUsers();
 
