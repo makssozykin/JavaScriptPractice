@@ -120,7 +120,6 @@
 // makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);
 // makeArray();
 
-
 // function makeArray(firstArray, secondArray, maxLength) {
 //     const newArray = firstArray.concat(secondArray);
 //     if (newArray.length > maxLength) {
@@ -166,7 +165,7 @@
 //         num += [words[i].length];
 //         arrayNum = num.split("");
 //         maxNum = Math.max(arrayNum);
-        
+
 //     }
 //     console.log(arrayNum);
 // }
@@ -251,8 +250,6 @@
 //   // Change code above this line
 // }
 
-
-    
 // getAllPropValues("name");
 // getAllPropValues("price");
 
@@ -376,7 +373,6 @@
 //   const names = sortCountFr.map(user => user.name);
 // };
 
-
 // const getFriends = (users) => {
 //   return users.flatMap(user => user.friends)
 // };
@@ -393,7 +389,7 @@
 //     allFriends.push(...user.friends);
 //   return allFriends;
 //   }, []);
-  
+
 //   const friends = allFriends(users);
 //   const getFriendStat = (acc, friend) => {
 //     if (!acc.hasOwnProperty(friend)) {
@@ -489,7 +485,7 @@
 //   .then(post => console.log(post))
 //   .catch(error => console.log(error));
 
-  // Change value of id property to update different post
+// Change value of id property to update different post
 // const postToUpdate = {
 //   id: 1,
 //   body: "CRUD is really awesome",
@@ -574,3 +570,49 @@
 
 // fetchUsers();
 
+// for (let i = 0; i < 10; i++) {
+//   setTimeout(function () {
+//     alert(i);
+//   }, 100);
+// }
+// let str = "Hello";
+// str.something = 5;
+// alert(str.something);
+// function User() {}
+// User.prototype = { admin: false };
+
+// let user = new User();
+
+// User.prototype = { admin: true };
+
+// alert(user.admin);
+
+// const input = document.getElementById("input");
+// input.setAttribute("value", "Пока");
+
+// const ul = document.querySelector("ul");
+// const div = document.getElementById("element");
+// const elem = document.getElementById("elem");
+// const a = div.attributes.test.value;
+
+// const form = document.body.secondChild;
+
+// console.log(form);
+
+// console.log(a);
+
+// var inputSet = document.createElement("input");
+// inputSet.setAttribute("checked", "checked");
+// elem.outerHTML = "Прощай, жестокий мир!";
+// alert(elem.outerHTML);
+// div.appendChild(inputSet);
+// console.log(inputSet.checked);
+
+// console.log(
+//   document.getElementById("hi").parentNode.parentNode.parentNode.tagName
+// );
+
+// console.log(div.offsetWidth);
+// console.log(div.clientWidth);
+// console.log(div.style.width);
+// console.log(parseInt(getComputedStyle(div.style.width)));
