@@ -6,25 +6,43 @@ const developers = [
   "Ксенія",
   "Олександр Курченко",
   "Максим Созикін",
-  "Оксана Червяченко (Коваль)",
+  "Оксана Червяченко",
   "Василь Ніколов",
   "Сергій Дзюба",
-  "Ірина Елькіна (rinvernal)",
+  "Ірина Елькіна",
   "Арина Назарчук",
   "Макисм Гулько",
 ];
 
-const btn = document.querySelector(".random");
-const teamlead = document.querySelector(".teamlead");
+const btnRandom = document.querySelector(".randomBtn");
+const btnClear = document.querySelector(".clearBtn");
+const teamlead = document.querySelector(".teamlead-name");
 
-btn.addEventListener("click", () => {
-  const leader = teamLead();
-  if (leader) {
-    btn.disabled = true;
-  }
-  teamlead.textContent = `Наш тімлід - ${leader}`;
+btnRandom.addEventListener("click", () => {
+  const interval = setInterval(() => {
+    btnRandom.disabled = true;
+    btnClear.disabled = true;
+    btnRandom.classList.add("btn-nonactive");
+    btnClear.classList.add("btn-nonactive");
+    teamlead.textContent = text();
+  }, 100);
+  setTimeout(() => {
+    clearInterval(interval);
+    btnRandom.disabled = false;
+    btnClear.disabled = false;
+    btnRandom.classList.remove("btn-nonactive");
+    btnClear.classList.remove("btn-nonactive");
+  }, 5000);
 });
 
-function teamLead() {
+btnClear.addEventListener("click", () => {
+  teamlead.textContent = "";
+});
+
+function text() {
+  return `${teamLeadRandom()}`;
+}
+
+function teamLeadRandom() {
   return developers[Math.floor(Math.random() * developers.length)];
 }
